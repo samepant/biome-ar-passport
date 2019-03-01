@@ -1,0 +1,13 @@
+.result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rebeccapurple;
+}
+
+.helper-text {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  font-size: 6vw;
+}
