@@ -1,4 +1,5 @@
 import React from 'react';
+import generateMask from './generateMask';
 
 export default class arPassport extends React.Component {
   constructor(props) {
@@ -29,13 +30,12 @@ export default class arPassport extends React.Component {
 
   initThreeScene(spec) {
     const threeStuffs = THREE.JeelizHelper.init(spec, this.detectCallback);
+    
+    const group = generateMask('wow hellso');
 
-     // CREATE A CUBE
-    const cubeGeometry = new THREE.BoxGeometry(1,1,1);
-    const cubeMaterial = new THREE.MeshNormalMaterial();
-    const threeCube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-    threeCube.frustumCulled = false;
-    threeStuffs.faceObject.add(threeCube);
+    group.frustumCulled = false;
+    threeStuffs.faceObject.add(group);
+
 
     //CREATE THE CAMERA
     const aspecRatio = spec.canvasElement.width / spec.canvasElement.height;

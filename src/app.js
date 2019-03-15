@@ -8,8 +8,8 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      codeScanned: false,
-      codeString: null,
+      codeScanned: true,
+      codeString: 'null',
     };
 
     this.handleScan = this.handleScan.bind(this);
